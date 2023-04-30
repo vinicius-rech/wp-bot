@@ -21,7 +21,7 @@ const _setConfiguration = (rawPrompt) => {
     }
 }
 
-export const executePrompt = async (rawPrompt) => {
+const executePrompt = async (rawPrompt) => {
     const configuration = _setConfiguration(rawPrompt);
     const response = await _openai.createCompletion(configuration)
         .catch(error => console.error(error));
