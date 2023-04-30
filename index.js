@@ -1,4 +1,6 @@
-import { Client, LocalAuth } from 'whatsapp-web.js';
+import pkg from 'whatsapp-web.js';
+
+const { Client, LocalAuth } = pkg;
 import { executePrompt } from './modules/GptHandler/main.js';
 
 import qrcode from 'qrcode-terminal'
@@ -22,13 +24,11 @@ _client.on('ready', async _ => {
     const chats = await _client.getChats();
     const groups = chats.filter(chat => chat.isGroup);
 
-    console.log(groups[0]);
+    const message = 'BOT ONLINE';
 
-    // const message = 'BOT ONLINE';
-    //
-    // groups.forEach(group => {
-    //     _client.sendMessage(group.id._serialized, message);
-    // })
+    groups.forEach(group => {
+        _client.sendMessage(group.id._serialized, message);
+    })
     console.log('BOT ONLINE');
 });
 
@@ -64,6 +64,4 @@ _client.on('message', async message => {
     }
 });
 
-(async _ => {
-    await _client.initialize().catch(clientError => console.error(clientError));
-})();
+_client.initialize().catch(clientError => console.error(clientError));
