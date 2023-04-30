@@ -1,5 +1,5 @@
 import { Client, LocalAuth } from 'whatsapp-web.js';
-import { executePrompt } from './modules/GptHandler';
+import { executePrompt } from './modules/GptHandler/main.js';
 
 import qrcode from 'qrcode-terminal'
 
