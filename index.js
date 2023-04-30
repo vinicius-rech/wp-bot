@@ -35,20 +35,20 @@ _client.on('message', async (message) => {
                 .catch(replyError => console.error(replyError));
             return false;
         }
-        const { data } = await executePrompt(message.body)
+        const response = await executePrompt(message.body)
             .catch(error => console.error(error));
 
-        await message.reply(data.choices[0].text)
+        await message.reply(response.data.choices[0].text)
             .catch(replyError => console.error(replyError));
     }
 });
 
 _client.on('message', async (message) => {
     if (/gay/i.test(message.body)) {
-        const { data } = await executePrompt(message.body)
+        const response = await executePrompt(message.body)
             .catch(error => console.error(error));
 
-        await message.reply(data.choices[0].text)
+        await message.reply(response.data.choices[0].text)
             .catch(replyError => console.error(replyError));
     }
 });
