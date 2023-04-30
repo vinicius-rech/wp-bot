@@ -1,0 +1,26 @@
+{
+  "name": "wp-bot",
+  "version": "1.0.0",
+  "description": "whatsapp bot",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/r3c4-d3v/wp-bot.git"
+  },
+  "author": "r3c4d3v",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/r3c4-d3v/wp-bot/issues"
+  },
+  "homepage": "https://github.com/r3c4-d3v/wp-bot#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "openai": "^3.2.1",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.19.5"
+  }
+}
