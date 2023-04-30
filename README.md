@@ -2,6 +2,7 @@
 Whatsapp bot
 
 ### Commits convention.
+* Always use dot `.` at the end of commit. 
 * API relevant changes
     * `feat` Commits, that adds a new feature
     * `fix` Commits, that fixes a bug
