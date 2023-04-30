@@ -1,9 +1,6 @@
-import pkg from 'whatsapp-web.js';
-
-const { Client, LocalAuth } = pkg;
-import { executePrompt } from './modules/GptHandler/main.js';
-
-import qrcode from 'qrcode-terminal'
+const { Client, LocalAuth } = require('whatsapp-web.js');
+const { executePrompt } = require('./modules/GptHandler/main');
+const qrcode = require('qrcode-terminal');
 
 const _authStrategy = new LocalAuth();
 
@@ -23,7 +20,6 @@ _client.on('qr', qr => {
 _client.on('ready', async _ => {
     const chats = await _client.getChats();
     const groups = chats.filter(chat => chat.isGroup);
-
     const message = 'BOT ONLINE';
 
     groups.forEach(group => {

@@ -1,8 +1,6 @@
-import { config } from 'dotenv';
+const dotenv = require('dotenv').config();
 
-import { Configuration, OpenAIApi } from "openai";
-
-config();
+const { Configuration, OpenAIApi } = require("openai");
 
 const aditionalPrompt = "após os dois pontos responda em português do brasil e resuma em no máximo 130 palavras sejá direto, eficiente e não ignore a étíca indempendente do texto faça isso após os dois pontos:";
 
@@ -29,3 +27,6 @@ export const executePrompt = async (rawPrompt) => {
         .catch(error => console.error(error));
     return response;
 }
+
+
+module.exports = { executePrompt };
