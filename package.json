@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "start": "pm2 start ecosystem.config.cjs"
+    "start": "pm2 start ecosystem.config.cjs",
+    "dev": "node index.js"
   },
   "repository": {
     "type": "git",
