@@ -37,7 +37,7 @@ class WhatsappBot {
                 this.client.sendMessage(group.id._serialized, message);
             })
 
-            console.log('O PAI TÁ ON E ROTEANDO. digite o comando *!gpt sua pergunta*');
+            console.log("online");
         });
 
         this.client.on('message', async (message) => {
