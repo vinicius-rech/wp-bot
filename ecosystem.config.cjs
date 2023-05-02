@@ -3,7 +3,7 @@ module.exports = {
         {
             name: "wp-bot",
             script: "index.js",
-            interpreter: "/usr/bin/node",
+            interpreter: "/root/.nvm/versions/node/v18.16.0/bin/node",
         },
     ],
 };
