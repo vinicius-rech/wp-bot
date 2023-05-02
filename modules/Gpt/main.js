@@ -13,6 +13,8 @@ class OpenAIHandler {
         }
         OpenAIHandler.#instance = this;
 
+        console.log(process.env.OPENIA_API_KEY)
+
         this.#configuration = new Configuration({
             apiKey: process.env.OPENIA_API_KEY
         });
