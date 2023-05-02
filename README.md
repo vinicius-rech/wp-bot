@@ -41,4 +41,4 @@ Whatsapp bot
 Configuration
 
 
-* Create a .env file in the project root directory and fill it with `OPENIA_API_KEY="key"`.
+* Rename .env.example file to .env file in the project root directory and fill it with OpenIA key.
