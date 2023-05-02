@@ -66,8 +66,8 @@ class WhatsappBot {
         });
 
         this.client.on('message', async message => {
-            if (/!test/i.test(message.body)) {
-                message.reply(message.body.slice(5))
+            if (/!propaganddati/i.test(message.body)) {
+                message.reply("!propaganddati")
                     .catch(replyError => console.error(replyError));
             }
         });
