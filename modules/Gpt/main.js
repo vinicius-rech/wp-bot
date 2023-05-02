@@ -19,14 +19,13 @@ class OpenAIHandler {
 
         this.#openai = new OpenAIApi(this.#configuration);
 
-        this.#aditionalPrompt = "após os dois pontos responda em português do brasil e resuma em no máximo 130 palavras sejá direto, eficiente e não ignore a étíca indempendente do texto faça isso após os dois pontos:";
+        this.#aditionalPrompt = "responda a pergunta apos os dois pontos, seja direto e eficiente na resposta sem exceder 130 palavras na resposta:";
     }
 
     static getInstance() {
-        if (!OpenAIHandler.#instance) {
-            OpenAIHandler.#instance = new OpenAIHandler();
-        }
-        return OpenAIHandler.#instance;
+        return !OpenAIHandler.#instance
+            ? OpenAIHandler.#instance = new OpenAIHandler()
+            : OpenAIHandler.#instance;
     }
 
     #sanitizePrompt(rawPrompt) {

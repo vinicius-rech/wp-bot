@@ -29,16 +29,15 @@ class WhatsappBot {
         });
 
         this.client.on('ready', async _ => {
-            // const chats = await this._client.getChats();
-            // const groups = chats.filter(chat => chat.isGroup);
-            // const message = 'BOT ONLINE';
+            const chats = await this.client.getChats();
+            const groups = chats.filter(chat => chat.isGroup);
+            const message = 'BOT ONLINE';
 
-            // console.log(groups[0])
+            groups.forEach(group => {
+                this.client.sendMessage(group.id._serialized, message);
+            })
 
-            // groups.forEach(group => {
-            //     this._client.sendMessage(group.id._serialized, message);
-            // })
-            console.log('BOT ONLINE');
+            console.log('O PAI TÁ ON E ROTEANDO. digite o comando *!gpt sua pergunta*');
         });
 
         this.client.on('message', async (message) => {
@@ -59,20 +58,14 @@ class WhatsappBot {
         });
 
         this.client.on('message', async message => {
-            if (/porra/i.test(message.body)) {
-                const emoji = '💦';
-                await message.react(emoji).catch(error => console.error(error));
-            }
-        });
-
-        this.client.on('message', async message => {
-            if (/!propaganddati/i.test(message.body)) {
-                message.reply("!propaganddati")
+            if (/!test/i.test(message.body)) {
+                message.reply(message.body.slice(5))
                     .catch(replyError => console.error(replyError));
             }
         });
 
-        return this.client.initialize().catch(clientError => console.error(clientError));
+        return this.client.initialize()
+            .catch(clientError => console.error(clientError));
     }
 }
 
