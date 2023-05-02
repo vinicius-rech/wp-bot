@@ -16,7 +16,7 @@ Whatsapp bot
 * `chore` Miscellaneous commits e.g. modifying `.gitignore`
   
 ### Used technologies
-* `Node.js (v14.17.6)`
+* `Node.js (v18.16.0)`
 
 
 * `npm (v6.14.15)`
