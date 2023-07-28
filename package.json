@@ -20,8 +20,8 @@
   "homepage": "https://github.com/r3c4-d3v/wp-bot#readme",
   "dependencies": {
     "dotenv": "^16.0.3",
-    "openai": "^3.2.1",
     "qrcode-terminal": "^0.12.0",
+    "realm": "^11.10.1",
     "whatsapp-web.js": "^1.19.5"
   },
   "devDependencies": {
